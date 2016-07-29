@@ -30,7 +30,6 @@ public class MenuScreen implements Screen {
 	
 	Label demoLabel;
 	TextButton startButton;
-	TextButton fullScreenButton;
 	TextButton quitButton;
 	boolean inFullScreen = false;
 	
@@ -70,22 +69,10 @@ public class MenuScreen implements Screen {
 		menuStage.addActor(startButton);
 		
 		
-		// fullScreenButton setup
-		fullScreenButton = new TextButton("Enter Full Screen", bStyle);
-		fullScreenButton.setSize(Gdx.graphics.getWidth() * 0.125f, Gdx.graphics.getWidth() * 0.0625f);
-		fullScreenButton.setPosition(Gdx.graphics.getWidth() * 0.5f, startButton.getY() - 10f, Align.center);
-		fullScreenButton.addListener(new ClickListener() {
-			@Override
-			public void clicked(InputEvent event, float x, float y) {
-				System.out.println("full screen clicked");
-			}
-		});
-		menuStage.addActor(fullScreenButton);
-		
 		// setup exit button
 		quitButton = new TextButton("Quit", bStyle);
 		quitButton.setSize(Gdx.graphics.getWidth() * 0.125f, Gdx.graphics.getWidth() * 0.0625f);
-		quitButton.setPosition(Gdx.graphics.getWidth() * 0.5f, fullScreenButton.getY() - 10f, Align.center);
+		quitButton.setPosition(Gdx.graphics.getWidth() * 0.5f, startButton.getY() - 10f, Align.center);
 		quitButton.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
