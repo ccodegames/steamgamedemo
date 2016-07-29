@@ -6,18 +6,15 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
-
-import javafx.geometry.Pos;
-
-import static com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
-import static com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 /**
  * MenuScreen.java implements Screen and represents the menu in which you can start the demo
  * 
@@ -49,8 +46,9 @@ public class MenuScreen implements Screen {
 		lStyle.fontColor = Color.GOLD;
 		lStyle.font.getRegion().getTexture().setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		demoLabel = new Label("Awesome Game Demo", lStyle);
-		demoLabel.setSize(Gdx.graphics.getWidth() * 0.25f, Gdx.graphics.getWidth() * 0.125f);
-		demoLabel.setPosition((Gdx.graphics.getWidth() - demoLabel.getWidth()) * 0.5f, (Gdx.graphics.getHeight() - demoLabel.getHeight()) * 0.75f);
+		demoLabel.setFontScale(2);
+		demoLabel.setAlignment(Align.center, Align.center);
+		demoLabel.setPosition(Gdx.graphics.getWidth() * 0.5f, Gdx.graphics.getHeight() * 0.75f, Align.center);
 		menuStage.addActor(demoLabel);
 		
 		
@@ -87,7 +85,7 @@ public class MenuScreen implements Screen {
 		// setup exit button
 		quitButton = new TextButton("Quit", bStyle);
 		quitButton.setSize(Gdx.graphics.getWidth() * 0.125f, Gdx.graphics.getWidth() * 0.0625f);
-		quitButton.setPosition(Gdx.graphics.getWidth() * 0.5f, startButton.getY() - 10f, Align.center);
+		quitButton.setPosition(Gdx.graphics.getWidth() * 0.5f, fullScreenButton.getY() - 10f, Align.center);
 		quitButton.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
