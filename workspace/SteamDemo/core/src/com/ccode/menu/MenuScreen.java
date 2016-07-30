@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -26,12 +25,10 @@ public class MenuScreen implements Screen {
 	/*
 	 * GUI Components
 	 */
-	Stage menuStage;
-	
-	Label demoLabel;
-	TextButton startButton;
-	TextButton quitButton;
-	boolean inFullScreen = false;
+	private Stage menuStage;
+	private Label demoLabel;
+	private TextButton startButton;
+	private TextButton quitButton;
 	
 	@Override
 	public void show() {
