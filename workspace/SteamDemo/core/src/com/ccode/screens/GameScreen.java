@@ -30,7 +30,7 @@ public class GameScreen implements Screen, InputProcessor{
 	private World physicsWorld; // Used for box2d to determin world physics properties
 	private Box2DDebugRenderer debugRenderer; // Renders simple shapes and lines
 	private OrthographicCamera camera; // A camera for rendering 2d
-	private double vpMRatio = 6/100; // Viewport units per meter
+	private double vpMRatio = 6.0 / 100; // Viewport units per meter
 	private int screenWidth;
 	private int screenHeight;
 	private final float TIMESTEP = 1/60f; // Number of times per second the physics are updated
