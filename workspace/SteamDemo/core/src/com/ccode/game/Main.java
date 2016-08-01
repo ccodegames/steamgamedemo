@@ -3,7 +3,16 @@ package com.ccode.game;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.ccode.menu.MenuScreen;
+import com.ccode.screens.MenuScreen;
+
+/**
+ * 
+ * @author c.code
+ * 
+ * Copyright c.code 2016
+ *
+ */
+
 
 public class Main extends Game {
 	SpriteBatch batch;

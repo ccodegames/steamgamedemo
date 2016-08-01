@@ -1,4 +1,4 @@
-package com.ccode.menu;
+package com.ccode.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -14,11 +14,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
+import com.ccode.game.Main;
 /**
  * MenuScreen.java implements Screen and represents the menu in which you can start the demo
  * 
  * @author c.code
  *
+ *	Copyright c.code 2016
  */
 
 public class MenuScreen implements Screen {
@@ -59,7 +61,7 @@ public class MenuScreen implements Screen {
 		startButton.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				System.out.println("clicked");
+				((Main) Gdx.app.getApplicationListener()).setScreen(new GameScreen());
 			}
 			
 		});
@@ -81,7 +83,6 @@ public class MenuScreen implements Screen {
 	
 	@Override
 	public void render(float delta) {
-		// TODO Auto-generated method stub
 		Gdx.gl.glClearColor(0, 0, 1, 0.5f);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		

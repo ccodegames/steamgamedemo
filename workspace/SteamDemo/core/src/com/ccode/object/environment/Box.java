@@ -5,6 +5,7 @@ package com.ccode.object.environment;
  * 
  * @author gabemac
  * 
+ * Copyright c.code 2016
  */
 
 public class Box {
